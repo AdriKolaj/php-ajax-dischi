@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+h3 {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+h4 {
+  font-weight: 400;
+  color: grey;
+}
+
+header {
+  height: 60px;
+  background-color: black;
+}
+header .container {
+  align-items: center;
+}
+header .container img {
+  height: 60%;
+}
+
+main {
+  padding: 40px 0;
+  background-color: #1A1A1A;
+}
+main .container {
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+main .album-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px;
+  height: 340px;
+  margin: 20px 0;
+  padding: 25px;
+  color: white;
+  background-color: black;
+  text-align: center;
+}
+main .album-container .img-container {
+  height: 70%;
+  padding-bottom: 5px;
+}
+main .album-container .img-container img {
+  height: 100%;
+}

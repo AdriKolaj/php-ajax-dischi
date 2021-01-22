@@ -1,0 +1,33 @@
+$albumWidth: 250px;
+$albumHeight: 340px;
+$albumImgHeight: 70%;
+$albumTxtHeight: 30%;
+
+main {
+    padding: 40px 0;
+    background-color: $mainBgColor;
+    .container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .album-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: $albumWidth;
+        height: $albumHeight;
+        margin: 20px 0;
+        padding: 25px;
+        color: $mainTxtColor;
+        background-color: $albumBgColor;
+        text-align: center;
+        
+        .img-container {
+            height: $albumImgHeight;
+            padding-bottom: 5px;
+            img {
+                height: 100%;
+            }
+        }
+    }
+}

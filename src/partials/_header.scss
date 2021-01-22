@@ -1,0 +1,12 @@
+$headerHeight: 60px;
+
+header {
+    height: $headerHeight;
+    background-color: $headerBgColor;
+    .container {
+        align-items: center;
+        img {
+            height: 60%;
+        }
+    }
+}
