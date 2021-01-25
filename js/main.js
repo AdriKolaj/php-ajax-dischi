@@ -1850,12 +1850,28 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js").de
 var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
   el: '#root',
   data: {
-    albums: []
+    albums: [],
+    selGenre: "",
+    genres: []
+  },
+  methods: {
+    selectGenre: function selectGenre() {
+      axios.get("http://localhost:8888/php-ajax-dischi/server.php", {
+        params: {
+          genre: this.selGenre
+        }
+      }).then(function (result) {});
+    }
   },
   mounted: function mounted() {
     var self = this;
-    axios.get("http://localhost:8888/php-ajax-dischi/server.php").then(function (response) {
+    axios.get("server.php").then(function (response) {
       self.albums = response.data;
+      self.albums.forEach(function (album) {
+        if (self.genres.includes(album.genre) == false) {
+          self.genres.push(album.genre);
+        }
+      });
     });
   }
 });

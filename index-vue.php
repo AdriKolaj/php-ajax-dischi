@@ -14,8 +14,16 @@
 	<body>
 		<?php include __DIR__ . '/partials/header.php' ?>
 		
-		<main>
-			<div id="root" class="container">
+		<main id="root">
+      <div class="container">
+        <form>
+          <select name="genre" v-model="selGenre">
+            <option selected value="">All</option>
+            <option :value=genre v-for="genre in genres">{{genre}}</option>
+          </select>
+        </form>
+      </div>
+			<div class="container">
 					<div class="album-container" v-for="album in albums">
 						<div class="img-container">
 							<img :src=album.poster alt="poster">
