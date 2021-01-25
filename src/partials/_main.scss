@@ -1,6 +1,6 @@
-$albumWidth: 250px;
+$albumWidth: 28%;
 $albumHeight: 340px;
-$albumImgHeight: 70%;
+$albumImgWidth: 100%;
 $albumTxtHeight: 30%;
 
 main {
@@ -8,7 +8,7 @@ main {
     background-color: $mainBgColor;
     .container {
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     .album-container {
         display: flex;
@@ -23,10 +23,10 @@ main {
         text-align: center;
         
         .img-container {
-            height: $albumImgHeight;
+            width: $albumImgWidth;
             padding-bottom: 5px;
             img {
-                height: 100%;
+                width: 90%;
             }
         }
     }

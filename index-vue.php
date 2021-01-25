@@ -7,7 +7,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Dischi - php & ajax</title>
+		<title>Dischi - Ajax</title>
 		<link rel="stylesheet" href="css/app.css">
 	</head>
 
@@ -15,22 +15,21 @@
 		<?php include __DIR__ . '/partials/header.php' ?>
 		
 		<main>
-			<div class="container">
-				<?php foreach ($albums as $album) { ?>
-					<div class="album-container">
+			<div id="root" class="container">
+					<div class="album-container" v-for="album in albums">
 						<div class="img-container">
-							<img src="<?= $album['poster'] ?>" alt="poster">
+							<img :src=album.poster alt="poster">
 						</div>
 						<div class="text-container">
-							<h3><?= $album['title'] ?></h3>
-							<h4><?= $album['author'] ?></h4>
-							<div class="year"><?= $album['year'] ?></div>
+							<h3>{{album.title}}</h3>
+							<h4>{{album.author}}</h4>
+							<div class="year">{{album.year}}</div>
 						</div>
 					</div>
-				<?php } ?>
 			</div>
 		</main>
 
 		<?php include __DIR__ . '/partials/footer.php' ?>
+    <script src="js/main.js"></script>
 	</body>
 </html>

@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap);
 * {
   margin: 0;
   padding: 0;
@@ -39,13 +40,13 @@ main {
 }
 main .container {
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 main .album-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 250px;
+  width: 28%;
   height: 340px;
   margin: 20px 0;
   padding: 25px;
@@ -54,9 +55,9 @@ main .album-container {
   text-align: center;
 }
 main .album-container .img-container {
-  height: 70%;
+  width: 100%;
   padding-bottom: 5px;
 }
 main .album-container .img-container img {
-  height: 100%;
+  width: 90%;
 }
